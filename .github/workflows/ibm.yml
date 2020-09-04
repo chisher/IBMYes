@@ -41,4 +41,14 @@ jobs:
         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
       run: |
         ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME"
+ addEventListener(
+"fetch",event => {
+let url=new URL(event.request.url);
+url.hostname="firstabc.us-south.cf.appdomain.cloud";
+let request=new Request(url,event.request);
+event. respondWith(
+fetch(request)
+)
+}
+)       
 
